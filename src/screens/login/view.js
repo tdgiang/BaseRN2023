@@ -15,8 +15,8 @@ const LoginView = ({onLogin}) => {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <View style={[styles.container, {backgroundColor: R.colors.white}]}>
-        {/* <Controller
+      <View style={styles.container}>
+        <Controller
           control={control}
           rules={{
             required: true,
@@ -32,8 +32,7 @@ const LoginView = ({onLogin}) => {
             />
           )}
           name="code"
-        /> */}
-
+        />
         <Button title={'Lưu'} onPress={handleSubmit(onLogin)} />
       </View>
     </SafeAreaView>

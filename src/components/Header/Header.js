@@ -19,22 +19,15 @@ import {
 } from '../../config/Functions';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import SnackBar from '../SnackBar';
 const Header = props => {
-  const {title, isBack, isTransparent, hideShadow} = props;
+  const {title, isBack} = props;
   const navigate = useNavigation();
   return (
     <View style={styles.headerContainer}>
-      <Text
-        numberOfLines={1}
-        style={[
-          styles.txtTitle,
-          {color: isTransparent ? R.colors.white : R.colors.black},
-        ]}>
+      <Text numberOfLines={1} style={styles.txtTitle}>
         {title}
       </Text>
-
       {isBack && (
         <TouchableOpacity
           style={{
@@ -60,7 +53,6 @@ const styles = StyleSheet.create({
     height: 45,
     width: '100%',
     flexDirection: 'row',
-    paddingHorizontal: WIDTHXD(40),
     alignItems: 'center',
     marginBottom: 2,
     justifyContent: 'center',

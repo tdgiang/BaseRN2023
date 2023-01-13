@@ -25,7 +25,8 @@ const RootView = props => {
   const dropDownAlertRef = useRef(null);
   const dropDownAlertLongTimeRef = useRef(null);
   const setInitLanguage = async () => {
-    const laguage = await AsyncStorage.getItem(KEY.LANGUAGE);
+    // const laguage = await AsyncStorage.getItem(KEY.LANGUAGE);
+    const laguage = 'vi';
     if (laguage) props.changeLanguage(laguage);
     setLocation(I18n, laguage);
   };
