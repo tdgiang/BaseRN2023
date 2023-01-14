@@ -11,11 +11,13 @@ import {
 } from 'react-native';
 import R from '../../assets/R';
 import {
-  getFontXD,
   getWidth,
   HEIGHTXD,
   WIDTHXD,
   WIDTHXDICON,
+  HEIGHT,
+  getFontSize,
+  WIDTH,
 } from '../../config/Functions';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
@@ -30,14 +32,7 @@ const Header = props => {
       </Text>
       {isBack && (
         <TouchableOpacity
-          style={{
-            position: 'absolute',
-            left: 10,
-            width: 35,
-            height: 30,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
+          style={styles.btnBack}
           onPress={() => navigate.goBack()}>
           <Icon color={R.colors.black} name={'arrowleft'} size={22} />
         </TouchableOpacity>
@@ -50,18 +45,17 @@ export default Header;
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 45,
+    height: HEIGHT(45),
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 2,
     justifyContent: 'center',
-    padding: 5,
-    backgroundColor: 'white',
+    backgroundColor: R.colors.white,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 5,
     },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -70,10 +64,17 @@ const styles = StyleSheet.create({
 
   txtTitle: {
     flex: 1,
-    fontSize: 16,
-    paddingHorizontal: 10,
+    fontSize: getFontSize(16),
     textAlign: 'center',
     fontWeight: 'bold',
     color: R.colors.black,
+  },
+  btnBack: {
+    position: 'absolute',
+    left: WIDTH(10),
+    width: WIDTH(35),
+    height: HEIGHT(30),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

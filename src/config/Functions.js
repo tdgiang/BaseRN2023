@@ -191,8 +191,8 @@ export const HEIGHTXD = h => height * (h / 2436);
 export const getLineHeightXD = f => f / 3 + 2;
 export const getFontXD = f => f / 3 + 2;
 // Get size for figmar
-export const WIDTH = w => width * (w / 360);
-export const HEIGHT = h => height * (h / 640);
+export const WIDTH = w => width * (w / 1125) * 3;
+export const HEIGHT = h => height * (h / 2436) * 3;
 export const getLineHeight = f => f;
 export const getFont = f => f - 1;
 export const WIDTHXDICON = w => width * (w / 1125);

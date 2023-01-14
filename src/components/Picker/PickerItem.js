@@ -148,7 +148,10 @@ export default class PickerItem extends Component {
             <View
               style={[
                 styles.dropdown_row,
-                {backgroundColor: isSelected ? '#1C6AF6' : '#f2f2f2'},
+                {
+                  backgroundColor:
+                    option.value == value?.value ? '#C0C0C0' : '#f2f2f2',
+                },
               ]}>
               <Text
                 numberOfLines={1}
@@ -156,8 +159,10 @@ export default class PickerItem extends Component {
                   styles.dropdown_row_text,
                   {
                     marginHorizontal: WIDTHXD(30),
-                    color: isSelected ? 'white' : 'black',
-                    fontWeight: isSelected ? 'bold' : '300',
+                    // color: option.value == value?.value ? 'black' : 'black',
+                    // fontWeight: option.value == value?.value ? '700' : '400',
+                    fontWeight: '400',
+                    color: 'black',
                   },
                 ]}>
                 {`${option.name}`}
@@ -189,14 +194,14 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     alignSelf: 'center',
-    width: WIDTHXD(960),
+    width: '100%',
     height: HEIGHTXD(0),
   },
   dropdown_text: {
     fontSize: 16,
   },
   dropdown_dropdown: {
-    width: WIDTHXD(960),
+    width: '100%',
     maxHeight: HEIGHTXD(200),
     borderBottomLeftRadius: WIDTHXD(20),
     borderBottomRightRadius: WIDTHXD(20),
