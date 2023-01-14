@@ -72,4 +72,8 @@ export default {
   No_Internet: 'Không có kết nốt Internet',
   Check_Internet_Connect: 'Kiểm tra lại đường truyền',
   Retry: 'Thử lại',
+
+  Select_source_image: 'Chọn nguồn lấy ảnh',
+  Photo_library: 'Thư viện ảnh',
+  Take_photo: 'Chụp ảnh',
 };

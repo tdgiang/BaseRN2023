@@ -17,6 +17,8 @@ import {
   HEIGHTXD,
   getHeight,
   WIDTHXDICON,
+  HEIGHT,
+  WIDTH,
 } from '../../config/Functions';
 import Icon from 'react-native-vector-icons/AntDesign';
 
@@ -232,28 +234,20 @@ const styles = StyleSheet.create({
   },
   pickerStyle: {
     width: '100%',
-    height: HEIGHTXD(109),
+    height: HEIGHT(40),
     flexDirection: 'row',
-    paddingHorizontal: WIDTHXD(30),
+    paddingHorizontal: WIDTH(10),
     justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
     backgroundColor: 'white',
     marginTop: 5,
     borderRadius: 7,
-    borderWidth: 0.7,
-    borderColor: '#DBDBDB',
+    borderWidth: 1,
+    borderColor: R.colors.borderGray,
     fontSize: 16,
     paddingVertical: 5,
     paddingHorizontal: 10,
     backgroundColor: 'white',
-    shadowColor: '#AFA9A9',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 1.84,
-    elevation: 1,
   },
 });

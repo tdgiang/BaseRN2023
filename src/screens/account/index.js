@@ -4,6 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import {connect} from 'react-redux';
 import {saveUserToRedux, saveWalletInfo} from '../../actions/users';
 import {showLoading, hideLoading} from '../../actions/loadingAction';
+import {showAlert, TYPE} from '../../components/DropdownAlert';
 
 const Account = props => {
   return <AccountView />;

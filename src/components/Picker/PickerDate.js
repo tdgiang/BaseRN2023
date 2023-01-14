@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {HEIGHTXD, WIDTHXD, getFontXD} from '../../config/Functions';
+import {HEIGHTXD, WIDTHXD, getFontXD, HEIGHT} from '../../config/Functions';
 import R from '../../assets/R';
 import I18n from '../../helper/i18/i18n';
 import moment from 'moment';
@@ -51,14 +51,15 @@ const PickerDate = props => {
         <View
           style={{
             flexDirection: 'row',
-            height: 42,
+            height: HEIGHT(40),
             fontWeight: '400',
             paddingHorizontal: 17,
-            backgroundColor: R.colors.colorBgInputText,
             borderRadius: 10,
             borderBottomColor: 'transparent',
             justifyContent: 'center',
             alignItems: 'center',
+            borderWidth: 1,
+            borderColor: R.colors.borderGray,
           }}>
           <Text
             style={{
@@ -74,12 +75,12 @@ const PickerDate = props => {
         <TouchableOpacity
           style={{
             flexDirection: 'row',
-            height: 42,
+            height: HEIGHT(40),
             fontWeight: '400',
             paddingHorizontal: 17,
-            backgroundColor: R.colors.colorBgInputText,
             borderRadius: 10,
-            borderBottomColor: 'transparent',
+            borderWidth: 1,
+            borderColor: R.colors.borderGray,
           }}>
           <DatePicker
             date={time}

@@ -72,4 +72,7 @@ export default {
   Confirm: 'Confirm',
   NullDataSearch: 'No data',
   No_Internet: 'No internet',
+  Select_source_image: 'Select the source of the image',
+  Photo_library: 'Photo library',
+  Take_photo: 'Take a photo',
 };
